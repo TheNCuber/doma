@@ -16,6 +16,7 @@
   <link rel="icon" type="image/png" href="gfx/favicon.png" />
   <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.php?<?php print Helper::CreateQuerystring(getCurrentUser())?>" />
   <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">var gmap_apiKey = "<?php print GOOGLE_MAPS_API_KEY; ?>";</script>
   <script type="text/javascript" src="js/show_map.js?v=<?php print DOMA_VERSION; ?>"></script>
   <script type="text/javascript" src="js/jquery/jquery.timeago.js"></script>
   <?php
@@ -194,7 +195,7 @@ if(isset($QR) && $QR->IsValid)
 <?php
 if($map->IsGeocoded)
 {
-  $coordinates = $map->MapCenterLatitude .",". $map->MapCenterLongitude;
+  $coordinates = $map->MapCenterLongitude .",". $map->MapCenterLatitude;
   print '<input id="gmap_coordinates" type="hidden" value="'.$coordinates.'" />';
   print '<input id="gmap_url" type="hidden" value="'.$vd["GoogleMapsUrl"].'" />';
   print '<input id="gmap_lang" type="hidden" value="'.Session::GetLanguageCode().'" />';
