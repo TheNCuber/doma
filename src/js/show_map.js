@@ -166,7 +166,7 @@ function reloadGM()
 {
   if($("#gmap").size())
   {
-    $("#gmap").html("<a href='"+$("#gmap_url").val()+"' target='_blank'><img src='https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/static/pin-s-pitch+FFA500("+$("#gmap_coordinates").val()+")/"+$("#gmap_coordinates").val()+",10,0/174x"+$("#wrapper").height()+"?access_token="+gmap_apiKey+"'></a>");
+    $("#gmap").html("<a href='"+$("#gmap_url").val()+"' target='_blank'><img src='https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/static/pin-s-pitch+FFA500("+$("#gmap_coordinates").val()+")/"+$("#gmap_coordinates").val()+",10,0/174x"+$("#wrapper").height()+"?access_token="+mapbox_APIKey+"'></a>");
   }
 }
 

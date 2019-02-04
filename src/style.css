@@ -578,6 +578,11 @@ img.button
   margin-top: 1em;
 }
 
+#overviewMapContainer > div > div.mapboxgl-canvas-container.mapboxgl-interactive.mapboxgl-touch-drag-pan.mapboxgl-touch-zoom-rotate > canvas
+{
+  position: relative !important;
+}
+
 #usersBody #hideOverviewMap
 {
   display: none;

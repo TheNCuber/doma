@@ -32,7 +32,7 @@
     'RERUN_FREQUENCY' => '6',
     'RERUN_APIKEY' => 'xxxxxx',
     'RERUN_APIURL' => 'http://omaps.worldofo.com/apicall.php?apikey={0}&link={1}',
-    'GOOGLE_MAPS_API_KEY' => '',
+    'MAPBOX_API_KEY' => '',
     'ROOT_URL' => ''
   );
 

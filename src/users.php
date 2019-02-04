@@ -11,13 +11,15 @@
   <title><?php print _SITE_TITLE; ?></title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <link rel="stylesheet" href="style.css?v=<?php print DOMA_VERSION; ?>" type="text/css" />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
   <link rel="icon" type="image/png" href="gfx/favicon.png" />
   <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.php" />
   <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
   <script src="js/common.js?v=<?php print DOMA_VERSION; ?>" type="text/javascript"></script>
   <?php if($vd["OverviewMapData"] != null) { ?>
-    <script src="https://maps.googleapis.com/maps/api/js?key=<?php print GOOGLE_MAPS_API_KEY; ?>&amp;sensor=false&amp;language=<?php print Session::GetLanguageCode(); ?>" type="text/javascript"></script>
-    <script src="js/overview_map.js?v=<?php print DOMA_VERSION; ?>" type="text/javascript"></script>
+    <script type="text/javascript">var mapbox_APIKey = "<?php print MAPBOX_API_KEY; ?>";</script>
+    <script src="js/overview_map.js" type="text/javascript"></script>
     <script type="text/javascript">
       <!--
         var overviewMapData = <?php print json_encode($vd["OverviewMapData"]); ?>;
